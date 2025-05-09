@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>IA Contábil</title>
-  <link rel="manifest" href="manifest.json" />
-  <script defer src="app.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lançamento Contábil IA</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: auto; }
+    textarea, button { width: 100%; margin-top: 10px; padding: 10px; font-size: 16px; }
+    #resultado { margin-top: 20px; white-space: pre-wrap; background: #f4f4f4; padding: 15px; border-radius: 8px; }
+  </style>
 </head>
 <body>
-  <h1>Lançamentos Contábeis com IA</h1>
-  <textarea id="descricao" rows="4" cols="50" placeholder="Digite a descrição contábil..."></textarea>
-  <br />
+  <h2>Lançamento Contábil com IA</h2>
+  <textarea id="descricao" rows="4" placeholder="Digite a operação contábil, ex: Recebimento de cliente via Pix"></textarea>
   <button onclick="gerarLancamento()">Gerar Lançamento</button>
-  <pre id="resultado"></pre>
+  <div id="resultado">Resultado aparecerá aqui...</div>
+
+  <script src="app.js"></script>
 </body>
 </html>
