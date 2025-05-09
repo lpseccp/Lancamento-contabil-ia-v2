@@ -1,9 +1,9 @@
 {
-  "name": "IA Contábil",
-  "short_name": "Contábil IA",
-  "start_url": ".",
+  "name": "Lançamento Contábil IA",
+  "short_name": "ContábilIA",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
-  "description": "App PWA para gerar lançamentos contábeis com IA",
+  "description": "Gere lançamentos contábeis automáticos com IA",
   "icons": []
 }
