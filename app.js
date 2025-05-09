@@ -4,14 +4,14 @@ async function gerarLancamento() {
   resultado.textContent = "Processando...";
 
   try {
-    const resposta = await fetch("https://api-inference.huggingface.co/models/google/flan-t5-large", {
+    const resposta = await fetch("https://api-inference.huggingface.co/models/google/flan-t5-small", {
       method: "POST",
       headers: {
-        "Authorization": "Bearer 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",
+        "Authorization": "Bearer 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",  // Substitua pelo seu token Hugging Face
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        inputs: `Transforme isso em um lançamento contábil:\n${input}`,
+        inputs: `Converta isso em um lançamento contábil:\n${input}`
       }),
     });
 
@@ -19,8 +19,8 @@ async function gerarLancamento() {
 
     if (Array.isArray(data) && data[0]?.generated_text) {
       resultado.textContent = data[0].generated_text;
-    } else if (typeof data === "string") {
-      resultado.textContent = data;
+    } else if (data?.error) {
+      resultado.textContent = `Erro: ${data.error}`;
     } else {
       resultado.textContent = JSON.stringify(data, null, 2);
     }
